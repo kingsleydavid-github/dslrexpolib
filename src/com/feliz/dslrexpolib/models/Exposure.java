@@ -1,35 +1,81 @@
 package com.feliz.dslrexpolib.models;
 
-public class Exposure {
-	private static final long DEFAULT_ISO_VALUE = 100L;
-	private static final float DEFAULT_SHUTTERSPEED = 1.0F;
-	private static final long DEFAULT_APERTURE_VALUE = 0L;
-	private int eValue;
-	private Aperture aperture;
-	private ShutterSpeed shutterSpeed;
-	private ISOFilm isoFilm;
+import com.feliz.dslrexpolib.models.priority.Priorotizable;
+import com.feliz.dslrexpolib.utils.ExpoUtil;
 
-	public Exposure()
-	{
-		this.eValue = 0;
-		this.aperture = new Aperture(DEFAULT_APERTURE_VALUE);
-		this.shutterSpeed = new ShutterSpeed(DEFAULT_SHUTTERSPEED);
-		this.isoFilm = new ISOFilm(DEFAULT_ISO_VALUE);
-	}
+public class Exposure {
 	
-	public Exposure(int eValue)
+	private final Long eValue;
+	private final Aperture aperture;
+	private final ShutterSpeed shutterSpeed;
+	private final ISOFilm isoFilm;
+
+	public static class ManualPriority implements Priorotizable
 	{
+		private Long eValue;
+		private Aperture aperture;
+		private ShutterSpeed shutterSpeed;
+		private ISOFilm isoFilm;
+		
+		public ManualPriority aperture(Double value)
+		{
+			this.aperture = new Aperture(value);
+			return this;
+		}
+		public ManualPriority shutterSpeed(Double value)
+		{
+			this.shutterSpeed = new ShutterSpeed(value);
+			return this;
+		}
+		public ManualPriority isoFilm(Long value)
+		{
+			this.isoFilm = new ISOFilm(value);
+			return this;
+		}
+		public ManualPriority eValue(Long value)
+		{
+			this.eValue = new Long(value);
+			return this;
+		}
+		
+		public Exposure setExposure()
+		{
+			return new Exposure(this);
+		}
+		
+		@Override
+		public Long getExposureValue(Exposure evalues) {
+			return ExpoUtil.calculateExposure(evalues.getAperture(), evalues.getShutterSpeed(), evalues.getIsoFilm());
+
+		}
 		
 	}
 	
-	private Exposure getExposure(int eValue)
+	public Long geteValue() {
+		return eValue;
+	}
+
+	public Aperture getAperture() {
+		return aperture;
+	}
+
+	public ShutterSpeed getShutterSpeed() {
+		return shutterSpeed;
+	}
+
+	public ISOFilm getIsoFilm() {
+		return isoFilm;
+	}
+
+	public Exposure(ManualPriority priority)
 	{
-		Exposure exp = new Exposure();
-		
-		/*
-		 * Logic
-		 * 
-		 * */
-		return exp;
+		this.eValue = priority.eValue;
+		this.aperture = priority.aperture;
+		this.shutterSpeed = priority.shutterSpeed;
+		this.isoFilm = priority.isoFilm;
+	}
+
+	public Long getExposure(Double aperture, Double ss, Integer iso) {
+		return eValue;
 	}
 }

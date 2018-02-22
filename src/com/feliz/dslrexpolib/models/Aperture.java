@@ -1,10 +1,16 @@
 package com.feliz.dslrexpolib.models;
 
-class Aperture {
-	private Long value;
+public class Aperture {
 	
-	public Aperture(Long fNumber)
+	private Double value;
+	
+	public Aperture(Double fNumber)
 	{
 		this.value = fNumber;
+	}
+	
+	public Double getValue()
+	{
+		return this.value;
 	}
 }

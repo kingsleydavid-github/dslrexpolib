@@ -1,10 +1,15 @@
 package com.feliz.dslrexpolib.models;
 
-class ShutterSpeed {
-	private Float value;
+public class ShutterSpeed {
+	private Double value;
 	
-	public ShutterSpeed(Float speed)
+	public ShutterSpeed(Double speed)
 	{
 		this.value = speed;
+	}
+	
+	public Double getValue()
+	{
+		return this.value;
 	}
 }
