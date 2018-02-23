@@ -18,9 +18,14 @@ public class ExpoUtil {
 		
 		double logBase = Double.parseDouble(String.valueOf(ExpConstants.DEFAULT_LOG_BASE));
 		double n = Math.pow(aperture.getValue(), 2);
-		Double eValue = Math.log(logBase) *  ( n / shutterSpeed.getValue());
-		ev = (long) Math.floor(eValue);
-		
-		return ev;
+		Double x = n / shutterSpeed.getValue();
+		Double calculatedEv = log(x, logBase);
+		Double finalEV = calculatedEv > 0 ? Math.ceil(calculatedEv) : Math.floor(calculatedEv);
+		return finalEV.longValue();
+	}
+	
+	private static Double log(Double x, Double base)
+	{
+	    return (Math.log(x) / Math.log(base));
 	}
 }
