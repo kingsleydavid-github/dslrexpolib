@@ -1,8 +1,14 @@
 package com.feliz.dslrexpolib.models;
 
-import com.feliz.dslrexpolib.models.priority.Priorotizable;
 import com.feliz.dslrexpolib.utils.ExpoUtil;
 
+/**
+ * @author Kingsley.Davidj
+ *
+ *	This is a library to Calculate Exposure Value and to determine Exposure.
+ *	This library can be used to calculate Photographic Exposure.
+ *
+ */
 public class Exposure {
 	
 	private final Long eValue;
@@ -10,9 +16,8 @@ public class Exposure {
 	private final ShutterSpeed shutterSpeed;
 	private final ISOFilm isoFilm;
 
-	public static class ManualPriority implements Priorotizable
+	public static class ManualPriority
 	{
-		private Long eValue;
 		private Aperture aperture;
 		private ShutterSpeed shutterSpeed;
 		private ISOFilm isoFilm;
@@ -32,26 +37,19 @@ public class Exposure {
 			this.isoFilm = new ISOFilm(value);
 			return this;
 		}
-		public ManualPriority eValue(Long value)
-		{
-			this.eValue = new Long(value);
-			return this;
-		}
-		
+
 		public Exposure setExposure()
 		{
 			return new Exposure(this);
 		}
-		
-		@Override
-		public Long getExposureValue(Exposure evalues) {
-			return ExpoUtil.calculateExposure(evalues.getAperture(), evalues.getShutterSpeed(), evalues.getIsoFilm());
-
-		}
-		
 	}
 	
-	public Long geteValue() {
+	public static class AutoPriority
+	{
+		// TODO: code for auto priority
+	}
+	
+	public Long getValue() {
 		return eValue;
 	}
 
@@ -67,15 +65,19 @@ public class Exposure {
 		return isoFilm;
 	}
 
+	/**
+	 * This constructor expects a Manual Priority to calculate Exposure Value. 
+	 * @param priority the type of priority (Manual / Auto / Aperture / Shutter) to calculate Exposure.
+	 */
 	public Exposure(ManualPriority priority)
 	{
-		this.eValue = priority.eValue;
 		this.aperture = priority.aperture;
 		this.shutterSpeed = priority.shutterSpeed;
 		this.isoFilm = priority.isoFilm;
+		this.eValue = getExposure();
 	}
 
-	public Long getExposure(Double aperture, Double ss, Integer iso) {
-		return eValue;
+	private Long getExposure() {
+		return ExpoUtil.calculateManualExposureValue(this.aperture, this.shutterSpeed, this.isoFilm);
 	}
 }

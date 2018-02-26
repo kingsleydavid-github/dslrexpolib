@@ -1,6 +1,11 @@
 package com.feliz.dslrexpolib.models;
 
+/**
+ * @author Kingsley.Davidj
+ *
+ */
 public class ShutterSpeed {
+	
 	private Double value;
 	
 	public ShutterSpeed(Double speed)

@@ -1,6 +1,11 @@
 package com.feliz.dslrexpolib.models;
 
+/**
+ * @author Kingsley.Davidj
+ *
+ */
 public class ISOFilm {
+	
 	private Long value;
 	
 	public ISOFilm(Long isoValue)

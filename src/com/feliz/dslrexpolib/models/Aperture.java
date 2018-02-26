@@ -1,5 +1,9 @@
 package com.feliz.dslrexpolib.models;
 
+/**
+ * @author Kingsley.Davidj
+ *
+ */
 public class Aperture {
 	
 	private Double value;
