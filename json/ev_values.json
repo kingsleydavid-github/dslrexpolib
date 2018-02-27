@@ -4,381 +4,537 @@
     "condition": "Light sand or snow in full or slightly hazy sunlight (distinct shadows)",
     "aperture": "2.8",
     "shutterspeed": "1/8000s",
-    "c1": "Daylight"
+    "lightingCategory": {
+      "c1": "Daylight"
+    }
   },
   {
     "ev": "15",
     "condition": "Typical scene in full or slightly hazy sunlight (distinct shadows)",
     "aperture": "2.0",
     "shutterspeed": "1/8000s",
-    "c1": "Daylight"
+    "lightingCategory": {
+      "c1": "Daylight"
+    }
   },
   {
     "ev": "14",
     "condition": "Typical scene in hazy sunlight (soft shadows)",
     "aperture": "1.4",
     "shutterspeed": "1/8000s",
-    "c1": "Daylight"
+    "lightingCategory": {
+      "c1": "Daylight"
+    }
   },
   {
     "ev": "13",
     "condition": "Typical scene, cloudy bright (no shadows)",
     "aperture": "1.0",
     "shutterspeed": "1/8000s",
-    "c1": "Daylight"
+    "lightingCategory": {
+      "c1": "Daylight"
+    }
   },
   {
     "ev": "12",
     "condition": "Typical scene, heavy overcast",
     "aperture": "1.0",
     "shutterspeed": "1/4000s",
-    "c1": "Daylight"
+    "lightingCategory": {
+      "c1": "Daylight"
+    }
   },
   {
     "ev": "12",
     "condition": "Areas in open shade, clear sunlight",
     "aperture": "1.0",
     "shutterspeed": "1/4000s",
-    "c1": "Daylight"
+    "lightingCategory": {
+      "c1": "Daylight"
+    }
   },
   {
     "ev": "15",
     "condition": "Clear sky background",
     "aperture": "2.0",
     "shutterspeed": "1/8000s",
-    "c1": "Outdoor,natural light",
-    "c2": "Rainbows"
+    "lightingCategory": {
+      "c1": "Outdoor,natural light",
+      "c2": "Rainbows"
+    }
   },
   {
     "ev": "14",
     "condition": "Cloudy sky background",
     "aperture": "1.4",
     "shutterspeed": "1/8000s",
-    "c1": "Outdoor,natural light",
-    "c2": "Rainbows"
+    "lightingCategory": {
+      "c1": "Outdoor,natural light",
+      "c2": "Rainbows"
+    }
   },
   {
     "ev": "12",
     "condition": "Just before sunset",
     "aperture": "1",
     "shutterspeed": "1/4000s",
-    "c1": "Outdoor,natural light",
-    "c2": "Sunsets and skylines"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Sunsets and skylines"
+    }
   },
   {
     "ev": "13",
     "condition": "Just before sunset",
     "aperture": "1",
     "shutterspeed": "1/8000s",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Sunsets and skylines"
+    }
   },
   {
     "ev": "14",
     "condition": "Just before sunset",
     "aperture": "null",
     "shutterspeed": "1/4000s",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Sunsets and skylines"
+    }
   },
   {
     "ev": "12",
     "condition": "At sunset",
     "aperture": "1",
     "shutterspeed": "1/4000s",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Sunsets and skylines"
+    }
   },
   {
     "ev": "9",
     "condition": "Just after sunset",
     "aperture": "1",
     "shutterspeed": "1/500s",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Sunsets and skylines"
+    }
   },
   {
     "ev": "10",
     "condition": "Just after sunset",
     "aperture": "1",
     "shutterspeed": "1/1000s",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Sunsets and skylines"
+    }
   },
   {
     "ev": "11",
     "condition": "Just after sunset",
     "aperture": "1",
     "shutterspeed": "1/2000s",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Sunsets and skylines"
+    }
   },
   {
     "ev": "11",
     "condition": "Just after sunset",
     "aperture": "1",
     "shutterspeed": "1/2000s",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Sunsets and skylines"
+    }
   },
   {
     "ev": "15",
     "condition": "Full",
     "aperture": "2.0",
     "shutterspeed": "1/8000s",
-    "c2": "Moon",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Moon"
+    }
   },
   {
     "ev": "14",
     "condition": "Gibbous",
     "aperture": "1.4",
     "shutterspeed": "1/8000s",
-    "c2": "Moon",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Moon"
+    }
   },
   {
     "ev": "13",
     "condition": "Quater",
     "aperture": "1.0",
     "shutterspeed": "1/8000s",
-    "c2": "Moon",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Moon"
+    }
   },
   {
     "ev": "12",
     "condition": "Cresent",
     "aperture": "1.0",
     "shutterspeed": "1/4000s",
-    "c2": "Moon",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Moon"
+    }
   },
   {
     "ev": "-3",
     "condition": "Full",
     "aperture": "1.0",
     "shutterspeed": "8s",
-    "c2": "Moonlight",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Moonlight"
+    }
   },
   {
     "ev": "-2",
     "condition": "Full",
     "aperture": "1.0",
     "shutterspeed": "4s",
-    "c2": "Moonlight",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Moonlight"
+    }
   },
   {
     "ev": "-4",
     "condition": "Gibbous",
     "aperture": "1.0",
     "shutterspeed": "15s",
-    "c2": "Moonlight",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Moonlight"
+    }
   },
   {
     "ev": "-6",
     "condition": "Quarter",
     "aperture": "1.0",
     "shutterspeed": "60s",
-    "c2": "Moonlight",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Moonlight"
+    }
   },
   {
     "ev": "-4",
     "condition": "Bright",
     "aperture": "1.0",
     "shutterspeed": "15s",
-    "c2": "Aurora borealis and australis",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Aurora borealis and australis"
+    }
   },
   {
     "ev": "-3",
     "condition": "Bright",
     "aperture": "1.0",
     "shutterspeed": "8s",
-    "c2": "Aurora borealis and australis",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Aurora borealis and australis"
+    }
   },
   {
     "ev": "-6",
     "condition": "Medium",
     "aperture": "1.0",
     "shutterspeed": "60s",
-    "c2": "Aurora borealis and australis",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Aurora borealis and australis"
+    }
   },
   {
     "ev": "-5",
     "condition": "Medium",
     "aperture": "1.0",
     "shutterspeed": "30s",
-    "c2": "Aurora borealis and australis",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Aurora borealis and australis"
+    }
   },
   {
     "ev": "-11",
     "condition": "Milky Way galactic center",
     "aperture": "1.0",
     "shutterspeed": "32m",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Aurora borealis and australis"
+    }
   },
   {
     "ev": "-10",
     "condition": "Milky Way galactic center",
     "aperture": "1.0",
     "shutterspeed": "16m",
-    "c2": "Milky Way galactic center",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Milky Way galactic center"
+    }
   },
   {
     "ev": "-9",
     "condition": "Milky Way galactic center",
     "aperture": "1.0",
     "shutterspeed": "8m",
-    "c2": "Milky Way galactic center",
-    "c1": "Outdoor,natural light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "natural light",
+      "c3": "Milky Way galactic center"
+    }
   },
   {
     "ev": "9",
     "aperture": "1.0",
     "condition": "Neon and other bright signs",
     "shutterspeed": "1/500s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "10",
     "aperture": "1.0",
     "condition": "Neon and other bright signs",
     "shutterspeed": "1/1000s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "9",
     "aperture": "1.0",
     "condition": "Night sports",
     "shutterspeed": "1/500s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "9",
     "aperture": "1.0",
     "condition": "Fires and burning buildings",
     "shutterspeed": "1/500s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "8",
     "aperture": "1.0",
     "condition": "Bright street scenes",
     "shutterspeed": "1/250s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "7",
     "aperture": "1.0",
     "condition": "Night street scenes and window displays",
     "shutterspeed": "1/125s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "5",
     "aperture": "1.0",
     "condition": "Night vehicle traffic",
     "shutterspeed": "1/30s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "7",
     "aperture": "1.0",
     "condition": "Fairs and amusement parks",
     "shutterspeed": "1/125s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "4",
     "aperture": "1.0",
     "condition": "Christmas tree lights",
     "shutterspeed": "1/15s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "5",
     "aperture": "1.0",
     "condition": "Christmas tree lights",
     "shutterspeed": "1/30s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "3",
     "aperture": "1.0",
     "condition": "Floodlit buildings, monuments, and fountains",
     "shutterspeed": "1/8s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "4",
     "aperture": "1.0",
     "condition": "Floodlit buildings, monuments, and fountains",
     "shutterspeed": "1/15s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "5",
     "aperture": "1.0",
     "condition": "Floodlit buildings, monuments, and fountains",
     "shutterspeed": "1/30s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "2",
     "aperture": "1.0",
     "condition": "Distant views of lighted buildings",
     "shutterspeed": "1/4s",
-    "c1": "Outdoor, artificial light"
+    "lightingCategory": {
+      "c1": "Outdoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "8",
     "aperture": "1.0",
     "condition": "Galleries",
     "shutterspeed": "1/250s",
-    "c1": "Indoor, artificial light"
+    "lightingCategory": {
+      "c1": "Indoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "9",
     "aperture": "1.0",
     "condition": "Galleries",
     "shutterspeed": "1/500s",
-    "c1": "Indoor, artificial light"
+    "lightingCategory": {
+      "c1": "Indoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "10",
     "aperture": "1.0",
     "condition": "Galleries",
     "shutterspeed": "1/1000s",
-    "c1": "Indoor, artificial light"
+    "lightingCategory": {
+      "c1": "Indoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "11",
     "aperture": "1.0",
     "condition": "Galleries",
     "shutterspeed": "1/2000s",
-    "c1": "Indoor, artificial light"
+    "lightingCategory": {
+      "c1": "Indoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "8",
     "aperture": "1.0",
     "condition": "Sports events, stage shows, and the like",
     "shutterspeed": "1/250s",
-    "c1": "Indoor, artificial light"
+    "lightingCategory": {
+      "c1": "Indoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "9",
     "aperture": "1.0",
     "condition": "Sports events, stage shows, and the like",
     "shutterspeed": "1/500s",
-    "c1": "Indoor, artificial light"
+    "lightingCategory": {
+      "c1": "Indoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "8",
     "aperture": "1.0",
     "condition": "Circuses, floodlit",
     "shutterspeed": "1/250s",
-    "c1": "Indoor, artificial light"
+    "lightingCategory": {
+      "c1": "Indoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "9",
@@ -392,34 +548,49 @@
     "aperture": "1.0",
     "condition": "Offices and work areas",
     "shutterspeed": "1/125s",
-    "c1": "Indoor, artificial light"
+    "lightingCategory": {
+      "c1": "Indoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "8",
     "aperture": "1.0",
     "condition": "Offices and work areas",
     "shutterspeed": "1/250s",
-    "c1": "Indoor, artificial light"
+    "lightingCategory": {
+      "c1": "Indoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "5",
     "aperture": "1.0",
     "condition": "Home interiors",
     "shutterspeed": "1/30s",
-    "c1": "Indoor, artificial light"
+    "lightingCategory": {
+      "c1": "Indoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "6",
     "aperture": "1.0",
     "condition": "Home interiors",
     "shutterspeed": "1/60s",
-    "c1": "Indoor, artificial light"
+    "lightingCategory": {
+      "c1": "Indoor",
+      "c2": "artificial light"
+    }
   },
   {
     "ev": "7",
     "aperture": "1.0",
     "condition": "Home interiors",
     "shutterspeed": "1/125s",
-    "c1": "Indoor, artificial light"
+    "lightingCategory": {
+      "c1": "Indoor",
+      "c2": "artificial light"
+    }
   }
 ]

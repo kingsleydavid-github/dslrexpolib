@@ -1,5 +1,15 @@
 package com.feliz.dslrexpolib.utils;
 
+import java.io.FileReader;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 import com.feliz.dslrexpolib.models.Aperture;
 import com.feliz.dslrexpolib.models.ExpConstants;
 import com.feliz.dslrexpolib.models.Exposure;
@@ -36,6 +46,23 @@ public class ExpoUtil {
 	public static Exposure getExposureByTime()
 	{
 		Exposure exp = null;
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm aa");
+		Calendar calendar = sdf.getCalendar();
+		int hourOfDay = calendar.get(Calendar.HOUR_OF_DAY);
+		int am_pm = calendar.get(Calendar.AM_PM);
+		
+		JSONArray evJson = getExpoJSON();
+		
+		if(Calendar.AM_PM == am_pm)
+		{
+			System.out.println("AM");
+		}
+		else
+		{
+			System.out.println("PM");
+		}
+		
 		
 		// Auto Calculate Exposure
 		// 1. Read System Time
@@ -78,5 +105,24 @@ public class ExpoUtil {
 	private static Double log(Double x, Double base)
 	{
 	    return (Math.log(x) / Math.log(base));
+	}
+	
+	private static JSONArray getExpoJSON()
+	{
+		
+		JSONParser jsonParser = new JSONParser();
+		JSONArray expoValues = null;
+		try
+		{
+			Object obj = jsonParser.parse(new FileReader("json/ev_values.json"));
+			expoValues = (JSONArray) obj;
+			System.out.println(expoValues);
+		}
+		catch(ParseException | IOException e)
+		{
+			e.printStackTrace();
+		} 
+		
+		return expoValues;
 	}
 }
