@@ -5,19 +5,21 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
+import org.codehaus.jackson.map.ObjectMapper;
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 import com.feliz.dslrexpolib.models.Aperture;
 import com.feliz.dslrexpolib.models.ExpConstants;
 import com.feliz.dslrexpolib.models.Exposure;
 import com.feliz.dslrexpolib.models.ISOFilm;
 import com.feliz.dslrexpolib.models.ShutterSpeed;
+import com.feliz.dslrexpolib.models.json.EVArray;
+import com.feliz.dslrexpolib.models.json.EVElement;
 
 public class ExpoUtil {
 	
+	private static final String EV_VALUES_JSON_FILE_LOCATION = "json/ev_values.json";
+
 	private ExpoUtil() {
 	    throw new IllegalStateException("This is Exposure utility class.");
 	  }
@@ -52,8 +54,6 @@ public class ExpoUtil {
 		int hourOfDay = calendar.get(Calendar.HOUR_OF_DAY);
 		int am_pm = calendar.get(Calendar.AM_PM);
 		
-		JSONArray evJson = getExpoJSON();
-		
 		if(Calendar.AM_PM == am_pm)
 		{
 			System.out.println("AM");
@@ -63,13 +63,12 @@ public class ExpoUtil {
 			System.out.println("PM");
 		}
 		
-		
-		// Auto Calculate Exposure
-		// 1. Read System Time
-		// 2. Compare to Exposure chart,
-		// 3. get exposure values and return as Exposure
-		
 		return exp;
+	}
+	
+	public static EVArray getExpoValues()
+	{
+		return getExpoJSON();
 	}
 	
 
@@ -107,22 +106,19 @@ public class ExpoUtil {
 	    return (Math.log(x) / Math.log(base));
 	}
 	
-	private static JSONArray getExpoJSON()
+	private static EVArray getExpoJSON()
 	{
-		
-		JSONParser jsonParser = new JSONParser();
-		JSONArray expoValues = null;
+		EVArray evArray = null;
 		try
 		{
-			Object obj = jsonParser.parse(new FileReader("json/ev_values.json"));
-			expoValues = (JSONArray) obj;
-			System.out.println(expoValues);
+			ObjectMapper mapper = new ObjectMapper();
+			EVElement[] evValues = mapper.readValue(new FileReader(EV_VALUES_JSON_FILE_LOCATION), EVElement[].class);
+			evArray = new EVArray(evValues);
 		}
-		catch(ParseException | IOException e)
+		catch(IOException e)
 		{
 			e.printStackTrace();
 		} 
-		
-		return expoValues;
+		return evArray;
 	}
 }

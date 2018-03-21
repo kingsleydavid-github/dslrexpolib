@@ -1,7 +1,9 @@
 package com.feliz.dslrexpolib.models.json;
 
 import java.io.Serializable;
-import java.util.Map;
+import java.util.Iterator;
+
+import org.json.simple.JSONObject;
 
 public class EVElement implements Serializable{
 
@@ -11,7 +13,7 @@ public class EVElement implements Serializable{
 	private String condition;
 	private Double aperture;
 	private Double shutterspeed;
-	private Map<String, String> lightingCategory;
+	private JSONObject lightingCategory;
 	
 	@Override
 	public int hashCode() {
@@ -63,8 +65,7 @@ public class EVElement implements Serializable{
 		return shutterspeed;
 	}
 
-	public Map<String, String> getLightingCategory() {
+	public JSONObject getLightingCategory() {
 		return lightingCategory;
 	}
-	
 }

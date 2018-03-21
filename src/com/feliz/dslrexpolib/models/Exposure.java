@@ -1,5 +1,6 @@
 package com.feliz.dslrexpolib.models;
 
+import com.feliz.dslrexpolib.models.json.EVArray;
 import com.feliz.dslrexpolib.utils.ExpoUtil;
 
 /**
@@ -15,12 +16,20 @@ public class Exposure {
 	private final Aperture aperture;
 	private final ShutterSpeed shutterSpeed;
 	private final ISOFilm isoFilm;
+	private final EVArray exposureValues;
 
 	public static class ManualPriority
 	{
 		private Aperture aperture;
 		private ShutterSpeed shutterSpeed;
 		private ISOFilm isoFilm;
+		
+		public ManualPriority()
+		{
+			this.aperture = new Aperture(ExpConstants.DEFAULT_APERTURE_VALUE);
+			this.shutterSpeed = new ShutterSpeed(ExpConstants.DEFAULT_SHUTTERSPEED);
+			this.isoFilm = new ISOFilm(ExpConstants.DEFAULT_ISO_VALUE);
+		}
 		
 		public ManualPriority aperture(Double value)
 		{
@@ -42,11 +51,6 @@ public class Exposure {
 		{
 			return new Exposure(this);
 		}
-	}
-	
-	public static class AutoPriority
-	{
-		// TODO: code for auto priority
 	}
 	
 	public Long getValue() {
@@ -75,9 +79,21 @@ public class Exposure {
 		this.shutterSpeed = priority.shutterSpeed;
 		this.isoFilm = priority.isoFilm;
 		this.eValue = getExposure();
+		this.exposureValues = ExpoUtil.getExpoValues();
 	}
 
 	private Long getExposure() {
 		return ExpoUtil.calculateManualExposureValue(this.aperture, this.shutterSpeed, this.isoFilm);
 	}
+	
+	public Exposure getExposureByEV(Long ev)
+	{
+		return this.exposureValues.getExpoForEV(ev);
+	}
+	
+	
+	/*public Exposure getExposureByEV(Long ev, Long expCompensation)
+	{
+		return this.exposureValues.getExpoForEV(ev);
+	}*/
 }
